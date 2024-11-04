@@ -1,1 +1,98 @@
-/**/
+@font-face {
+    font-family: 'Montserrat'; 
+    src: url(./assets/fonts/Montserrat/Montserrat-SemiBold.ttf) format('truetype'); 
+    font-style: normal; 
+    font-weight: 600; 
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+
+:root {
+    --transition: 0.5s;
+    --color-light: white;
+    --background-primary-color: rgba(255, 70, 70, 1);
+    --font-color-light: white;
+    --font-color-dark: black;
+}
+
+body {
+    margin: auto;
+    background: var(--background-primary-color);
+}
+
+.container {
+    display: flex;
+    max-width: 1276px;
+    width: 100%;
+    margin: auto;
+}
+
+/*---------header---------*/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: var(--color-light);
+    font-family: 'Montserrat';
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    line-height: 15.6px;
+    letter-spacing: 0.05em;
+    padding: 2rem;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.logo__image {
+    width: 23px;
+    height: 23px;
+    background: url(./assets/img/snowflake.svg);
+    background-repeat: no-repeat;
+}
+
+.logo__name {
+    margin: 0 8px 0;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 47px;
+    margin: 0 2.1rem;
+}
+
+.nav a {
+    color: var(--font-color-dark);
+}
