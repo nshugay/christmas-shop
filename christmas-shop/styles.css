@@ -289,3 +289,109 @@ a {
     line-height: 23.68px;
     text-align: left;
 }
+
+/*--------Slider---------*/
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 10rem;
+}
+
+.slider__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*height: 328px;*/
+}
+
+.slider__article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: 2rem;
+}
+
+.slider__caption {
+    color: var(--font-color-light);
+}
+
+.slider__article h2 {
+    color: var(--font-color-light);
+}
+
+.slider__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    min-width: 0;
+    height: 200px;
+    gap: 20px;
+    position: relative;
+    transform: translateX(18%);
+}
+
+.slider__cell {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+    gap: 20px;
+}
+
+.slider__word {
+    font-family: 'Montserrat';
+    font-size: 80px;
+    line-height: 97.52px;
+    text-align: center;
+    color: var(--font-color-light);
+    text-transform: uppercase;
+}
+
+.slider__image {
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    border-radius: var(--border-radius);
+}
+
+.slider__button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    margin: 2rem 0;
+    gap: 20px;
+}
+
+.slider__button {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--border-radius);
+    background: none;
+    outline: none;
+    border: 1px solid var(--color-light);
+    color: var(--font-color-light); 
+    cursor: pointer;
+}
+
+.button__active:hover {
+    border: 1px solid var(--color-light);
+    background-color: var(--color-light);
+    color: var(--background-primary-color);
+    transition: var(--transition);
+}
+
+.button__unactive {
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    color: rgba(255, 255, 255, 0.4) !important;
+    cursor: not-allowed !important;
+}
