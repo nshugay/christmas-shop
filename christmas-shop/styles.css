@@ -5,6 +5,13 @@
     font-weight: 600; 
 }
 
+@font-face {
+    font-family: 'Allura'; 
+    src: url(./assets/fonts/Allura/Allura-Regular.ttf) format('truetype'); 
+    font-style: normal; 
+    font-weight: normal; 
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -32,7 +39,7 @@ body {
 .container {
     display: flex;
     max-width: 1276px;
-    width: 100%;
+    /*width: 100%;*/
     margin: auto;
 }
 
@@ -49,7 +56,9 @@ body {
     text-transform: uppercase;
     line-height: 15.6px;
     letter-spacing: 0.05em;
-    padding: 2rem;
+    padding: 1.3rem 1rem;
+    position: relative;
+    z-index: 999;
 }
 
 li {
@@ -64,6 +73,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .logo {
@@ -75,24 +85,135 @@ a {
 }
 
 .logo__image {
-    width: 23px;
-    height: 23px;
+    width: 24px;
+    height: 24px;
     background: url(./assets/img/snowflake.svg);
     background-repeat: no-repeat;
 }
 
 .logo__name {
     margin: 0 8px 0;
+    text-wrap: nowrap;
 }
+
+/*----------Nav--------*/
 
 .nav__list {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    column-gap: 47px;
-    margin: 0 2.1rem;
+    column-gap: 28px;
+    margin: 0 10px;
 }
 
 .nav a {
     color: var(--font-color-dark);
+}
+
+.nav__item {
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.nav__item:hover {
+    background: rgba(255, 70, 70, 0.1);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.nav__item:hover :nth-child(1){
+    color: var(--background-primary-color);
+    transition: var(--transition);
+}
+
+/*---------Hero---------*/
+
+.caption {
+    font-family: 'Allura';
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+.hero__caption {
+    color: var(--font-color-light); 
+    margin: 1.2rem;
+}
+
+.button {
+    font-family: 'Montserrat';
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    line-height: 15.6px;
+    letter-spacing: 0.05em;
+    background: rgba(24, 28, 41, 1);
+    border-radius: 20px;
+    padding: 20px 32px;
+    outline: none;
+    border: none;
+    color: var(--font-color-light);
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--color-light);
+    color: var(--font-color-dark);
+    transition: ease-in-out var(--transition);   
+}
+
+.h1 {
+    font-family: 'Montserrat';
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+    letter-spacing: 0.18em;
+    text-align: center;
+    color: var(--font-color-light);
+    text-transform: uppercase;
+    margin: 0 0 1.2rem;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.hero__wrapper {
+    position: relative;
+    top: 11rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.hero__background {
+    position: absolute;
+    display: block;
+    width: 100%;
+    width: 1440px;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bigball {
+    background-image: url(./assets/img/bigball.png);
+    z-index: 1;
+    top: -35px;
+    transform: translatex(-34.8%);  
+}
+
+.bigsnow {
+    background-image: url(./assets/img/bigsnow.png);
+    position: absolute;
+    z-index: 0;
+    top: -35px;
+    transform: translatex(-35%);  
 }
