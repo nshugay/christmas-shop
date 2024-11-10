@@ -510,3 +510,94 @@ a {
     color: var(--font-color-dark);
     text-transform: uppercase;
 }
+
+/*---------timer---------*/
+
+.timer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 24rem; 
+}
+
+.timer__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 999;
+}
+
+.timer h2 {
+    color: var(--font-color-light);
+    text-align: center;
+}
+
+.timer__caption {
+    color: var(--font-color-light);
+}
+
+.timer__article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+.timer-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 344px;
+    height: 72px;
+    border-radius: var(--border-radius);
+    padding: 8px 12px 12px;
+    text-align: center;
+    color: var(--font-color-light);
+    background:rgba(255, 255, 255, 0.4);
+    font-family: 'Montserrat';
+    margin: 1rem;
+}
+
+.timer__cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 52px;
+}
+
+.mid {
+    height: 20px;
+    width: 0.6px;
+    background: var(--font-color-light);
+}
+
+.timer__naming {
+    font-size: 12px;
+    line-height: 15.6px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: var(--font-color-light);
+    text-transform: uppercase;
+}
+
+.forest {
+    background-image: url(./assets/img/forest.png);
+    z-index: 0;
+    transform: translateY(16%); 
+    background-repeat: no-repeat;
+    height: 1000px;
+    position: absolute;
+    display: block;
+    width: 100%;
+    width: 1440px;
+    background-size: contain;
+}
