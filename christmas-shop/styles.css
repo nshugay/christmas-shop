@@ -94,6 +94,7 @@ a {
     align-items: center;
     margin: 0 20px;
     cursor: pointer;
+    color: var(--font-color-dark);
 }
 
 .logo__image {
@@ -106,6 +107,7 @@ a {
 .logo__name {
     margin: 0 8px 0;
     text-wrap: nowrap;
+    color: var(--font-color-dark);
 }
 /*----------Nav--------*/
 
