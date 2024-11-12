@@ -328,6 +328,8 @@ a {
     width: 100%;
     overflow: hidden;
     margin: 10rem auto 8rem;
+    position: relative;
+    z-index: 999;
 }
 
 .slider__container {
@@ -506,6 +508,11 @@ a {
     border-radius: var(--border-radius);
     background-color: rgb(243, 243, 243);
     cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
 }
 
 .card:hover :nth-child(2) {
@@ -716,6 +723,10 @@ footer a {
     border-radius: var(--border-radius);
     background: rgba(236, 243, 248, 1);
     cursor: pointer;
+}
+
+.footer__card:hover {
+    transition: var(--transition);
 }
 
 footer a:hover,
