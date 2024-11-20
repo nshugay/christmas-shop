@@ -68,7 +68,7 @@ body {
     text-transform: uppercase;
     line-height: 15.6px;
     letter-spacing: 0.05em;
-    padding: 1.3rem 1rem;
+    padding: 1.2rem 1rem;
     position: relative;
     z-index: 999;
 }
@@ -117,6 +117,47 @@ a {
     align-items: center;
     column-gap: 7px;
 }
+/*
+.burger {
+    display: none;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 2.5%;
+}
+
+.burger__line {
+    display: inline-block;
+    width: 20px;
+    height: 1px;
+    border: 0px;
+    background-color: var(--font-color-dark);
+    margin: -4px 0 0;
+}
+
+
+.burger__line::after { 
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 1px;
+    border: 0px;
+    background-color: var(--font-color-dark);
+    margin: 0 0 4px;
+}
+
+
+@media (width < 769px) {
+    .nav__list {
+        visibility: hidden;;
+    }
+
+    .burger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}*/
 
 .nav a {
     color: var(--font-color-dark);
@@ -256,7 +297,7 @@ a {
 .biggarland {
     background-image: url(./assets/img/biggarland.png);
     z-index: 0;
-    top: -35px;
+    top: -40px;
     background-repeat: no-repeat;
     height: 200px;
 }
@@ -459,6 +500,15 @@ a {
     align-items: center;
     gap: 1.2rem;
     margin: 2rem;
+}
+
+.best__article-gifts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1.2rem;
+    margin: 1.8rem;
 }
 
 .best__caption {
@@ -666,7 +716,7 @@ a {
 .forest {
     background-image: url(./assets/img/forest.png);
     z-index: 0;
-    transform: translateY(17%); 
+    transform: translateY(16%); 
     background-repeat: no-repeat;
     height: 1000px;
     position: absolute;
@@ -783,3 +833,4 @@ svg path {
 .footer__links-wrapper li svg:hover {
     stroke: rgba(255, 70, 70, 1);  
 }
+
