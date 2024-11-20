@@ -115,8 +115,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    column-gap: 28px;
-    margin: 0 10px;
+    column-gap: 7px;
 }
 
 .nav a {
@@ -125,7 +124,7 @@ a {
 
 .nav__item {
     border-radius: 12px;
-    padding: 10px;
+    padding: 12px 20px;
 }
 
 .nav__item:hover {
@@ -136,12 +135,17 @@ a {
 
 .item-unactive {
     border-radius: 12px;
-    padding: 10px;
-    cursor: auto !important;
+    padding: 12px 20px;
+    cursor: default !important;
+    background: rgba(255, 70, 70, 0.1);
 }
 
 .link-unactive {
-    cursor: auto !important;
+    cursor: default !important;
+}
+
+.item-unactive a {
+    color: var(--background-primary-color);
 }
 
 .nav__item:hover :nth-child(1){
