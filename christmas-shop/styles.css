@@ -315,60 +315,6 @@ a {
     align-items: center;
     z-index: 999;
 }
-/*
-.background-image {
-    position: absolute;
-    display: block;
-    width: 100%;
-    width: 1440px;
-    background-size: contain;
-    background-position: center;
-}
-
-.bigball {
-    background-image: url(./assets/img/bigball.png);
-    z-index: 0;
-    top: -35px;
-    transform: translatex(-34.8%);  
-    background-repeat: no-repeat;
-    height: 600px;
-}
-
-.bigsnow {
-    background-image: url(./assets/img/bigsnow.png);
-    z-index: 0;
-    transform: translatex(-35%);  
-    height: 1600px;
-}
-
-.biggarland {
-    background-image: url(./assets/img/biggarland.png);
-    z-index: 0;
-    top: -38px;
-    background-repeat: no-repeat;
-    height: 200px;
-}*/
-
-/*---------------------------------MEDIA-----------------------------------*/
-/*
-@media (width < 769px) {
-    .background-image {
-        position: absolute;
-        display: block;
-        width: 100%;
-        width: 1240px;
-        background-size: contain;
-    }
-    
-    .bigball {
-        background-image: url(./assets/img/bigball.png);
-        z-index: 0;
-        top: 0px;
-        transform: translatex(-32.7%);  
-        background-repeat: no-repeat;
-        height: 600px;
-    }
-}*/
 
 /*---------About---------*/
 
@@ -459,6 +405,9 @@ a {
 /*---------------------------------MEDIA-----------------------------------*/
 
 @media (width < 1400px) {
+    footer {
+        padding: 0 8px;
+    }
     .about__article {
         padding: 100px 50px 100px 58px;
     }
@@ -821,24 +770,7 @@ a {
     text-decoration-skip-ink: none;
     color: var(--font-color-light);
     text-transform: uppercase;
-}/*
-
-.forest {
-    background-image: url(./assets/img/forest.png);
-    width: 100%;
-    height: 1000px;
-    transform: translateY(16.1%); 
-   background-size: contain;*/
-
-
-
-/*---------------------------------MEDIA-----------------------------------*/
-/*
-@media (width < 1439px) {
-    .forest {
-        background-size: contain;
-    }
-}*/
+}
 
 /*---------footer---------*/
 
