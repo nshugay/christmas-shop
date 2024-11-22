@@ -581,6 +581,17 @@ a {
     z-index: 999;
 }
 
+.biggarland {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background-image: url(./assets/img/biggarland.png);
+    background-repeat: no-repeat;
+    z-index: 0;
+    top: -40px;
+    background-size: contain;
+}
+
 .best__container {
     display: flex;
     flex-direction: column;
