@@ -385,7 +385,7 @@ a {
     height: 528px;
     border-radius: var(--border-radius);
     align-self: center;
-    position: relative;
+    background-position: center;
     z-index: 0;
     overflow: clip;
 }
