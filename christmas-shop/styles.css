@@ -469,6 +469,10 @@ a {
     /*height: 328px;*/
 }
 
+.slider__button svg path {
+    stroke: rgb(255, 255, 255);
+}
+
 .slider__article {
     display: flex;
     flex-direction: column;
@@ -476,6 +480,12 @@ a {
     align-items: center;
     gap: 10px;
     margin: 2rem;
+}
+
+svg path {
+    stroke: inherit;
+    stroke-width: inherit;
+    transition: all .5s ease;
 }
 
 .slider__caption {
@@ -553,6 +563,7 @@ a {
     border: 1px solid var(--color-light);
     color: var(--font-color-light); 
     cursor: pointer;
+    padding: 16px 15px 14px;
 }
 
 .button__active:hover {
@@ -560,6 +571,10 @@ a {
     background-color: var(--color-light);
     color: var(--background-primary-color);
     transition: var(--transition);
+}
+
+.button__active:hover .arr path {
+    stroke: var(--background-primary-color);
 }
 
 .button__unactive {
@@ -909,12 +924,6 @@ footer a:hover,
     width: 196px;
     height: 40px;
     color: var(--font-color-dark);
-}
-
-svg path {
-    stroke: inherit;
-    stroke-width: inherit;
-    transition: all .5s ease;
 }
 
 .footer__links-wrapper li svg {
