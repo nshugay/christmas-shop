@@ -1,15 +1,13 @@
 @font-face {
     font-family: 'Montserrat'; 
     src: url(./assets/fonts/Montserrat/Montserrat-SemiBold.ttf) format('truetype'); 
-    font-style: normal; 
-    font-weight: normal; 
+    font-style: normal;  
 }
 
 @font-face {
     font-family: 'Montserrat-Medium'; 
     src: url(./assets/fonts/Montserrat/Montserrat-Regular.ttf) format('truetype'); 
     font-style: normal; 
-    font-weight: normal; 
 }
 
 @font-face {
@@ -20,7 +18,7 @@
 }
 
 :root {
-    --transition: 0.5s;
+    --transition: 0.3s;
     --color-light: white;
     --background-primary-color: rgba(255, 70, 70, 1);
     --font-color-light: white;
@@ -939,78 +937,74 @@ footer a {
     .timer {
         min-height: 705px;
     }
+
     .best__article {
         white-space: wrap;
         text-wrap: wrap;
         max-width: 340px;
         margin: 2rem 0;
     }
+
     .best__tabs-wrapper {
         max-width: 355px;
         gap: 0;
     }
+
     .best__tabs-wrapper li {
         padding: 0.8rem;
         white-space: nowrap;
         text-wrap: nowrap;
     }
-}
+}      
 
 @media (hover: hover) {
-    .button__active :hover {
+    .button__active:hover {
         border: 1px solid var(--color-light);
         background-color: var(--color-light);
         color: var(--background-primary-color);
     }
-    
-    .button__active :hover .arr path {
-        stroke: var(--background-primary-color);
-    }
-           
-    .card :hover {
+ 
+    .card:hover {
         box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2);
     }
 
-    .card :hover :nth-child(2) {
+    .card:hover :nth-child(2) {
         color: var(--background-primary-color);
         transition: 0.3s;
     }
 
-    .footer__links-wrapper li :hover {
+    .footer__links-wrapper li:hover {
         stroke: rgba(255, 70, 70, 1);   
     }
     
-    .footer__links-wrapper li svg :hover {
+    .footer__links-wrapper li svg:hover {
         stroke: rgba(255, 70, 70, 1);  
     }
-
-    .footer__card :hover {
-        transition: var(--transition);
-    }
     
-    footer a :hover,
-    .footer__card :hover :nth-child(3),
-    .footer__card :hover :nth-child(2) {
+    footer a:hover,
+    .footer__card:hover :nth-child(3),
+    .footer__card:hover :nth-child(2) {
         color: var(--background-primary-color);
-        transition: 0.3s;
     }
 
-    .best__tabs-wrapper li :hover {
+    .button__active:hover .arr path {
+        stroke: var(--background-primary-color);
+    }
+
+    .best__tabs-wrapper li:hover {
         background: rgba(255, 255, 255, 0.2);
         cursor: pointer;
     }
    
-    .nav__item :hover {
+    .nav__item:hover {
         background: rgba(255, 70, 70, 0.1);
-        transition: var(--transition);
         cursor: pointer;
     }
 
-    .nav__item :hover :nth-child(1){
+    .nav__item:hover :nth-child(1){
         color: var(--background-primary-color);
-        transition: var(--transition);
     }
-    .button :hover {
+    .button:hover {
         background-color: var(--color-light);
         color: var(--font-color-dark);
     }   
