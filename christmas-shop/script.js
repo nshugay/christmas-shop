@@ -552,7 +552,7 @@ const initializeTimer = () => {
     
     const currentDay = Math.floor(currentDate / DAY);
     const currentHour = Math.floor(currentDate / HOUR) % 24;
-    const currentMinute = Math.floor(currentDate / MINUTES) % 60;
+    const currentMinute = Math.floor(currentDate / MINUTE) % 60;
     const currentSecond = Math.floor(currentDate / SECOND) % 60;
 
     dayElem.textContent = (currentDay);
