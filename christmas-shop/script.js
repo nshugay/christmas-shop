@@ -471,6 +471,44 @@ burger.addEventListener('click', openNavigation);
 navigation.addEventListener('click', closeNavigation);
 links.forEach(link => link.addEventListener('click', closeNavigation));
 
+//------------------------------------FILTER------------------------------------//
+
+const cards = document.querySelectorAll('.card');
+const giftsMenu = document.querySelector('.best__buttons-wrapper');
+const giftsTabs = document.querySelectorAll('.best__button');
+
+const filterCards = (filter) => {
+    cards.forEach(card => {
+        if (filter === 'all' || card.classList.contains(filter)) {
+            card.classList.remove('hidden');
+        } else {
+            card.classList.add('hidden');
+        };
+    });
+};
+
+const removeSelectedTagStyle = () => {
+  giftsTabs.forEach(tab => {
+    tab.classList.remove('best__button_active');
+  });
+};
+
+const initializeFilter = () => {
+  giftsTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+          const filterValue = tab.dataset.filter;
+
+          removeSelectedTagStyle();
+
+          tab.classList.add('best__button_active');
+
+          filterCards(filterValue);
+      });
+  });
+};
+
+initializeFilter();
+
 //------------------------------------SLIDER------------------------------------//
 
 // slider
@@ -562,4 +600,5 @@ const initializeTimer = () => {
 };
 
 initializeTimer();
-setInterval(initializeTimer, 1000, );
+setInterval(initializeTimer, 1000);
+
