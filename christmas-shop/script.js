@@ -436,10 +436,11 @@ const giftsCollection = [
 
 //------------------------------------BURGER------------------------------------//
 
+// burger
 const burger = document.querySelector('.burger');
 const burgerLinePrimary = document.querySelector('.burger__line_primary');
 const burgerLineSecondary = document.querySelector('.burger__line_secondary');
-
+// nav
 const navigation = document.querySelector('.nav__list');
 const links = document.querySelectorAll('.nav__item')
 const html = document.querySelector('html');
@@ -470,22 +471,69 @@ burger.addEventListener('click', openNavigation);
 navigation.addEventListener('click', closeNavigation);
 links.forEach(link => link.addEventListener('click', closeNavigation));
 
+//------------------------------------FILTER------------------------------------//
+
+const cards = document.querySelectorAll('.card');
+const giftsMenu = document.querySelector('.best__buttons-wrapper');
+const giftsTabs = document.querySelectorAll('.best__button');
+
+const filterCards = (filter) => {
+    cards.forEach(card => {
+        if (filter === 'all' || card.classList.contains(filter)) {
+            card.classList.remove('hidden');
+        } else {
+            card.classList.add('hidden');
+        };
+    });
+};
+
+const removeSelectedTagStyle = () => {
+  giftsTabs.forEach(tab => {
+    tab.classList.remove('best__button_active');
+  });
+};
+
+const initializeFilter = () => {
+  giftsTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+          const filterValue = tab.dataset.filter;
+
+          removeSelectedTagStyle();
+
+          tab.classList.add('best__button_active');
+
+          filterCards(filterValue);
+      });
+  });
+};
+
+initializeFilter();
+
 //------------------------------------SLIDER------------------------------------//
 
+// slider
 const sliderTrack = document.querySelector('.slider__row');
 const sliderContainer = document.querySelector('.slider__container');
+// buttons
 const prevButton = document.querySelector('.slider__button_left');
 const nextButton = document.querySelector('.slider__button_right');
+// clicks
+const desktopClicks = 3;
+const tabletClicks = 6;
+const tabletWidth = 768;
 
-const getVisibleSlides = () => (window.innerWidth > 769 ? 3 : 6);
-
+const getVisibleSlides = () => (window.innerWidth >= tabletWidth ? desktopClicks : tabletClicks);
+// content width
 const containerWidth = sliderContainer.offsetWidth;
 const trackWidth = sliderTrack.offsetWidth;
 
 let currentOffset = 0;
 
 const initializeSlider = () => {
-    const slideWidth = (trackWidth - containerWidth) / getVisibleSlides();
+
+    let clicksAmount = getVisibleSlides();
+
+    const slideWidth = (trackWidth - containerWidth) / clicksAmount;
 
     const updateButtonStates = () => {
         nextButton.classList.toggle('button__unactive', currentOffset <= -(slideWidth * getVisibleSlides()));
@@ -494,24 +542,63 @@ const initializeSlider = () => {
         prevButton.classList.toggle('button__active', currentOffset < 0);
     };
 
-    const moveRight = () => {
+    const slideToRight = () => {
         currentOffset = Math.max(currentOffset - slideWidth, -(slideWidth * getVisibleSlides()));
         sliderTrack.style.left = `${currentOffset}px`;
         updateButtonStates();
     };
 
-    const moveLeft = () => {
+    const slideToLeft = () => {
         currentOffset = Math.min(currentOffset + slideWidth, 0);
         sliderTrack.style.left = `${currentOffset}px`;
         updateButtonStates();
     };
 
-    prevButton.addEventListener('click', moveLeft);
-    nextButton.addEventListener('click', moveRight);
+    prevButton.addEventListener('click', slideToLeft);
+    nextButton.addEventListener('click', slideToRight);
     updateButtonStates();
 };
 
 initializeSlider();
-window.addEventListener('resize', initializeSlider);
 
-//------------------------------------SLIDER------------------------------------//
+window.addEventListener('resize', () => {
+   // window.location.reload(); --- включить перед деплоем
+    currentOffset = 0;
+    sliderTrack.style.left = '0px';
+    initializeSlider();
+});
+
+//------------------------------------TIMER------------------------------------//
+
+
+const SECOND = 1000;
+const MINUTE = 60 * SECOND;
+const HOUR = 60 * MINUTE;
+const DAY = 24 * HOUR;
+
+const secondElem = document.querySelector('.second');
+const minuteElem = document.querySelector('.minute');
+const hourElem = document.querySelector('.hour');
+const dayElem = document.querySelector('.day');
+
+
+const initializeTimer = () => {
+    const currentYear = +new Date().getUTCFullYear();
+    const newYearsDay = +new Date(Date.UTC(currentYear + 1, 0, 1))
+    const todayDate = +new Date();
+    const currentDate = newYearsDay - todayDate;
+    
+    const currentDay = Math.floor(currentDate / DAY);
+    const currentHour = Math.floor(currentDate / HOUR) % 24;
+    const currentMinute = Math.floor(currentDate / MINUTE) % 60;
+    const currentSecond = Math.floor(currentDate / SECOND) % 60;
+
+    dayElem.textContent = (currentDay);
+    hourElem.textContent = (currentHour);
+    minuteElem.textContent = (currentMinute);
+    secondElem.textContent = (currentSecond);
+};
+
+initializeTimer();
+setInterval(initializeTimer, 1000);
+
