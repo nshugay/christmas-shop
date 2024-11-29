@@ -530,4 +530,36 @@ window.addEventListener('resize', () => {
     initializeSlider();
 });
 
-//------------------------------------SLIDER------------------------------------//
+//------------------------------------TIMER------------------------------------//
+
+
+const SECOND = 1000;
+const MINUTE = 60 * SECOND;
+const HOUR = 60 * MINUTE;
+const DAY = 24 * HOUR;
+
+const secondElem = document.querySelector('.second');
+const minuteElem = document.querySelector('.minute');
+const hourElem = document.querySelector('.hour');
+const dayElem = document.querySelector('.day');
+
+
+const initializeTimer = () => {
+    const currentYear = +new Date().getUTCFullYear();
+    const newYearsDay = +new Date(Date.UTC(currentYear + 1, 0, 1))
+    const todayDate = +new Date();
+    const currentDate = newYearsDay - todayDate;
+    
+    const currentDay = Math.floor(currentDate / DAY);
+    const currentHour = Math.floor(currentDate / HOUR) % 24;
+    const currentMinute = Math.floor(currentDate / MINUTES) % 60;
+    const currentSecond = Math.floor(currentDate / SECOND) % 60;
+
+    dayElem.textContent = (currentDay);
+    hourElem.textContent = (currentHour);
+    minuteElem.textContent = (currentMinute);
+    secondElem.textContent = (currentSecond);
+};
+
+initializeTimer();
+setInterval(initializeTimer, 1000, );
