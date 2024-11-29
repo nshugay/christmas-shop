@@ -19,18 +19,6 @@
     font-weight: normal; 
 }
 
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-    font-size: 10px;
-    overflow-x: hidden;
-}
-
 :root {
     --transition: 0.5s;
     --color-light: white;
@@ -38,6 +26,19 @@ html {
     --font-color-light: white;
     --font-color-dark: black;
     --border-radius: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: var(--transition) ease-in-out;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+    overflow-x: hidden;
 }
 
 body {
@@ -63,18 +64,18 @@ body {
 
 ::-webkit-scrollbar {
     width: 5px;
-    background-color: #f9f9fd;
+    background-color: rgb(249, 249, 253);
 }
 
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    background-color: #f9f9fd;
+    background-color: rgb(249, 249, 253);
 }
 
 .container {
@@ -160,7 +161,6 @@ a {
     right: 2.5%;
     cursor: pointer;
     padding: 10px;
-    transition: var(--transition) ease-in-out;
 }
 
 .burger__line_secondary,
@@ -168,21 +168,19 @@ a {
     display: inline-block;
     width: 20px;
     height: 1px;
-    border: 0.5px solid var(--font-color-dark);
+    border: 1px solid var(--font-color-dark);
     background-color: var(--font-color-dark);
     border-radius: 1px;
-    /*margin: 0 0 2px;*/
-    transition: var(--transition) ease-in-out;
 }
 
 .burger__line_primary_active {
     transform: rotate(45deg);
-    margin: 11px 3px 0px;
+    margin: 0 0 -10px;
 }
 
 .burger__line_secondary_active {
     transform: rotate(-45deg);
-    margin: -2px 2px 14px;
+    margin: -10px 0 0;
 }
 
 .nav__list_active {
@@ -206,7 +204,6 @@ a {
         right: -768px;
         z-index: 999;
         background-color: var(--color-light);
-        transition: var(--transition) ease-in-out;
         font-size: 24px;
         line-height: 36.48px;
         letter-spacing: 0.16em;
@@ -235,12 +232,6 @@ a {
     padding: 12px 20px;
 }
 
-.nav__item:hover {
-    background: rgba(255, 70, 70, 0.1);
-    transition: var(--transition);
-    cursor: pointer;
-}
-
 .item-unactive {
     border-radius: 12px;
     padding: 12px 20px;
@@ -256,10 +247,6 @@ a {
     color: var(--background-primary-color);
 }
 
-.nav__item:hover :nth-child(1){
-    color: var(--background-primary-color);
-    transition: var(--transition);
-}
 
 /*---------Hero---------*/
 
@@ -298,12 +285,6 @@ a {
     color: var(--font-color-light);
     cursor: pointer;
     box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2);
-}
-
-.button:hover {
-    background-color: var(--color-light);
-    color: var(--font-color-dark);
-    transition: ease-in-out var(--transition);   
 }
 
 .h1 {
@@ -522,7 +503,6 @@ a {
 svg path {
     stroke: inherit;
     stroke-width: inherit;
-    transition: all .5s ease;
 }
 
 .slider__caption {
@@ -602,23 +582,17 @@ svg path {
     color: var(--font-color-light); 
     cursor: pointer;
     padding: 16px 15px 14px;
-    transition: var(--transition) ease;
 }
 
-.button__active:hover {
-    border: 1px solid var(--color-light);
-    background-color: var(--color-light);
-    color: var(--background-primary-color);
-}
-
-.button__active:hover .arr path {
-    stroke: var(--background-primary-color);
+.button__active {
+    stroke-opacity: 1;
 }
 
 .button__unactive {
     border: 1px solid rgba(255, 255, 255, 0.4) !important;
     color: rgba(255, 255, 255, 0.4) !important;
     cursor: not-allowed !important;
+    stroke-opacity: 0.4;
 }
 
 /*---------Best---------*/
@@ -696,12 +670,6 @@ svg path {
     cursor: auto !important;
 }
 
-.best__tabs-wrapper li:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transition: var(--transition);
-    cursor: pointer;
-}
-
 /*---cards---*/
 
 .card {
@@ -714,16 +682,6 @@ svg path {
     border-radius: var(--border-radius);
     background-color: rgb(243, 243, 243);
     cursor: pointer;
-}
-
-.card:hover {
-    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2);
-    transition: var(--transition);
-}
-
-.card:hover :nth-child(2) {
-    color: var(--background-primary-color);
-    transition: 0.3s;
 }
 
 .card-image {
@@ -929,17 +887,6 @@ footer a {
     flex-shrink: 1;
 }
 
-.footer__card:hover {
-    transition: var(--transition);
-}
-
-footer a:hover,
-.footer__card:hover :nth-child(3),
-.footer__card:hover :nth-child(2) {
-    color: var(--background-primary-color);
-    transition: 0.3s;
-}
-
 .footer__cards-image {    
     width: 80px;
     height: 80px;
@@ -967,15 +914,6 @@ footer a:hover,
 .footer__links-wrapper li svg {
     stroke: var(--font-color-dark);  
 }
-
-.footer__links-wrapper li:hover {
-    stroke: rgba(255, 70, 70, 1);   
-}
-
-.footer__links-wrapper li svg:hover {
-    stroke: rgba(255, 70, 70, 1);  
-}
-
 /*---------------------------------MEDIA-----------------------------------*/
 
 @media (width < 1400px) {
@@ -1016,4 +954,64 @@ footer a:hover,
         white-space: nowrap;
         text-wrap: nowrap;
     }
+}
+
+@media (hover: hover) {
+    .button__active :hover {
+        border: 1px solid var(--color-light);
+        background-color: var(--color-light);
+        color: var(--background-primary-color);
+    }
+    
+    .button__active :hover .arr path {
+        stroke: var(--background-primary-color);
+    }
+           
+    .card :hover {
+        box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2);
+    }
+
+    .card :hover :nth-child(2) {
+        color: var(--background-primary-color);
+        transition: 0.3s;
+    }
+
+    .footer__links-wrapper li :hover {
+        stroke: rgba(255, 70, 70, 1);   
+    }
+    
+    .footer__links-wrapper li svg :hover {
+        stroke: rgba(255, 70, 70, 1);  
+    }
+
+    .footer__card :hover {
+        transition: var(--transition);
+    }
+    
+    footer a :hover,
+    .footer__card :hover :nth-child(3),
+    .footer__card :hover :nth-child(2) {
+        color: var(--background-primary-color);
+        transition: 0.3s;
+    }
+
+    .best__tabs-wrapper li :hover {
+        background: rgba(255, 255, 255, 0.2);
+        cursor: pointer;
+    }
+   
+    .nav__item :hover {
+        background: rgba(255, 70, 70, 0.1);
+        transition: var(--transition);
+        cursor: pointer;
+    }
+
+    .nav__item :hover :nth-child(1){
+        color: var(--background-primary-color);
+        transition: var(--transition);
+    }
+    .button :hover {
+        background-color: var(--color-light);
+        color: var(--font-color-dark);
+    }   
 }
