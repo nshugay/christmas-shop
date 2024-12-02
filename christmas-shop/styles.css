@@ -568,6 +568,28 @@ svg path {
     .slider__button-wrapper {
         padding: 0 1rem;
     }
+    .best__to-up-button_active {
+        display: flex !important;
+    }
+}
+
+.best__to-up-button {
+    display: none;
+    /*position: absolute;*/
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    border: 1px solid var(--background-primary-color);
+    background-color: var(--color-light);
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 999;
+    stroke: var(--background-primary-color) !important;
+    transition: all .3s ease-in-out !important;
 }
 
 .slider__button {
@@ -702,7 +724,7 @@ svg path {
     padding: 18px 20px;
     border-radius: var(--border-radius);
     background: var(--color-light);
-    z-index: 999;
+    z-index: 990;
     gap: 5px;
 }
 /*
@@ -835,7 +857,7 @@ svg path {
     align-items: center;
     width: 100%;
     position: relative;
-    z-index: 999;
+    z-index: 50;
     margin: auto;
     background: var(--color-light);
     color: var(--font-color-dark);
@@ -917,6 +939,11 @@ footer a {
 .hidden {
     display: none;
 }
+
+.unvisible {
+    visibility: hidden;
+}
+
 /*---------------------------------MEDIA-----------------------------------*/
 
 @media (width < 1400px) {

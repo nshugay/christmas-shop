@@ -1,3 +1,6 @@
+const cards = document.querySelectorAll('.card');
+const giftsMenu = document.querySelector('.best__buttons-wrapper');
+
 //-------------------------------GIFTS COLLECTION-------------------------------//
 
 const giftsCollection = [
@@ -473,8 +476,6 @@ links.forEach(link => link.addEventListener('click', closeNavigation));
 
 //------------------------------------FILTER------------------------------------//
 
-const cards = document.querySelectorAll('.card');
-const giftsMenu = document.querySelector('.best__buttons-wrapper');
 const giftsTabs = document.querySelectorAll('.best__button');
 
 const filterCards = (filter) => {
@@ -508,6 +509,20 @@ const initializeFilter = () => {
 };
 
 initializeFilter();
+
+//------------------------------------BUTTON------------------------------------//
+
+const toTopButton = document.querySelector('.best__to-up-button');
+
+const showUpToTopButton = () => {
+    if (window.scrollY > 250) {
+        toTopButton.classList.add('best__to-up-button_active');
+    } else {
+        toTopButton.classList.remove('best__to-up-button_active');
+    }
+};
+
+window.addEventListener('scroll', showUpToTopButton);
 
 //------------------------------------SLIDER------------------------------------//
 
@@ -569,7 +584,6 @@ window.addEventListener('resize', () => {
 });
 
 //------------------------------------TIMER------------------------------------//
-
 
 const SECOND = 1000;
 const MINUTE = 60 * SECOND;
