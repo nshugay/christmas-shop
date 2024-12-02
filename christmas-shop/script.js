@@ -794,7 +794,7 @@ const initializeSlider = () => {
 initializeSlider();
 
 window.addEventListener('resize', () => {
-  window.location.reload(); //--- включить перед деплоем
+  //window.location.reload(); //--- включить перед деплоем
   currentOffset = 0;
   sliderTrack.style.left = '0px';
   initializeSlider();
