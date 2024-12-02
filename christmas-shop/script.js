@@ -476,7 +476,7 @@ links.forEach(link => link.addEventListener('click', closeNavigation));
 
 //------------------------------------BUTTON------------------------------------//
 
-if (window.location.pathname === 'gifts.html') {
+//if (window.location.pathname === 'gifts.html') {
 
 const toTopButton = document.querySelector('.best__to-up-button');
 
@@ -489,7 +489,7 @@ const showUpToTopButton = () => {
 };
 
 window.addEventListener('scroll', showUpToTopButton);
-};
+//};
 //--------------------------------MODAL & CARDS---------------------------------//
 
 const cardsContainer = document.querySelector('.best__cards-wrapper');
@@ -643,19 +643,19 @@ const createModal = (i) => {
   return modal;
 }
 
-const appendCards = (i) => {
-  cardsContainer.innerHTML = '';
-
-  const dataArray = [];
-
-  if (window.location.pathname === 'gifts.html') {
-  for (let i = 0; i < gifts.length; i++) {
+/*
+ if (window.location.pathname.endsWith('gifts.html')) {
+    // Если на странице gifts.html, добавляем все карточки
+    for (let i = 0; i < gifts.length; i++) {
       const card = generateCards(i);
       dataArray.push(card);
-  };
+    }
   } else {
+    // В противном случае добавляем 36 случайных карточек
     const selectedIndexes = new Set();
-    while (selectedIndexes.size < 4) {
+
+    // Убедитесь, что хоть 36 уникальных индексов существуют
+    while (selectedIndexes.size < 36 && selectedIndexes.size < gifts.length) {
       const randomIndex = Math.floor(Math.random() * gifts.length);
       selectedIndexes.add(randomIndex);
     }
@@ -664,7 +664,36 @@ const appendCards = (i) => {
       const card = generateCards(index);
       dataArray.push(card);
     }
-  };
+  }
+*/
+
+const appendCards = (i) => {
+  cardsContainer.innerHTML = '';
+
+  const dataArray = [];
+
+  if (window.location.pathname.endsWith('gifts.html')) {
+    // Если на странице gifts.html, добавляем все карточки
+    for (let i = 0; i < gifts.length; i++) {
+      const card = generateCards(i);
+      dataArray.push(card);
+    }
+  } else {
+    // В противном случае добавляем 36 случайных карточек
+    const selectedIndexes = new Set();
+
+    // Убедитесь, что хоть 36 уникальных индексов существуют
+    while (selectedIndexes.size < 4 && selectedIndexes.size < gifts.length) {
+      const randomIndex = Math.floor(Math.random() * gifts.length);
+      selectedIndexes.add(randomIndex);
+    }
+
+    for (const index of selectedIndexes) {
+      const card = generateCards(index);
+      dataArray.push(card);
+    }
+  }
+
 
   dataArray.sort(() => Math.random() - 0.5);
   dataArray.forEach(card => cardsContainer.append(card));
@@ -674,7 +703,7 @@ appendCards();
 
 //------------------------------------FILTER------------------------------------//
 
-if (window.location.pathname === 'gifts.html') {
+//if (window.location.pathname === 'gifts.html') {
 
 const giftsTabs = document.querySelectorAll('.best__button');
 
@@ -708,9 +737,9 @@ const initializeFilter = () => {
 };
 
 initializeFilter();
-};
+//};
 
-if (window.location.pathname === 'index.html') {
+//if (window.location.pathname === 'index.html') {
 
 //------------------------------------SLIDER------------------------------------//
 
@@ -804,4 +833,4 @@ const initializeTimer = () => {
 initializeTimer();
 setInterval(initializeTimer, 1000);
 
-};
+//};
