@@ -476,7 +476,7 @@ links.forEach(link => link.addEventListener('click', closeNavigation));
 
 //------------------------------------BUTTON------------------------------------//
 
-if (window.location.pathname === '/christmas-shop/gifts.html') {
+if (window.location.pathname === 'gifts.html') {
 
 const toTopButton = document.querySelector('.best__to-up-button');
 
@@ -648,7 +648,7 @@ const appendCards = (i) => {
 
   const dataArray = [];
 
-  if (window.location.pathname === '/christmas-shop/gifts.html') {
+  if (window.location.pathname === 'gifts.html') {
   for (let i = 0; i < gifts.length; i++) {
       const card = generateCards(i);
       dataArray.push(card);
@@ -674,7 +674,7 @@ appendCards();
 
 //------------------------------------FILTER------------------------------------//
 
-if (window.location.pathname === '/christmas-shop/gifts.html') {
+if (window.location.pathname === 'gifts.html') {
 
 const giftsTabs = document.querySelectorAll('.best__button');
 
@@ -710,7 +710,7 @@ const initializeFilter = () => {
 initializeFilter();
 };
 
-if (window.location.pathname === '/christmas-shop/index.html') {
+if (window.location.pathname === 'index.html') {
 
 //------------------------------------SLIDER------------------------------------//
 
