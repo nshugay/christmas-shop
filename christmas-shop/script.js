@@ -627,12 +627,10 @@ const createModal = (i) => {
 
   modal.style.display = 'flex'; 
 
-  // Закрытие модального окна по клику на 'x'
   modal.querySelector('.modal__button').addEventListener('click', () => {
     modal.style.display = 'none';
   });
 
-  // Закрытие модального окна при клике вне него
   modal.addEventListener('click', (event) => {
     if (event.target === modal) {
       modal.style.opacyty = '0'
@@ -641,31 +639,7 @@ const createModal = (i) => {
   });
 
   return modal;
-}
-
-/*
- if (window.location.pathname.endsWith('gifts.html')) {
-    // Если на странице gifts.html, добавляем все карточки
-    for (let i = 0; i < gifts.length; i++) {
-      const card = generateCards(i);
-      dataArray.push(card);
-    }
-  } else {
-    // В противном случае добавляем 36 случайных карточек
-    const selectedIndexes = new Set();
-
-    // Убедитесь, что хоть 36 уникальных индексов существуют
-    while (selectedIndexes.size < 36 && selectedIndexes.size < gifts.length) {
-      const randomIndex = Math.floor(Math.random() * gifts.length);
-      selectedIndexes.add(randomIndex);
-    }
-
-    for (const index of selectedIndexes) {
-      const card = generateCards(index);
-      dataArray.push(card);
-    }
-  }
-*/
+};
 
 const appendCards = (i) => {
   cardsContainer.innerHTML = '';
