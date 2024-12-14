@@ -11,8 +11,8 @@ const gifts = [
   "superpowers": {
     "live": "+500",
     "create": "+500",
-    "love": "+200",
-    "dream": "+400"
+    "love": "+500",
+    "dream": "+500"
   }
 },
 
@@ -23,8 +23,8 @@ const gifts = [
   "superpowers": {
     "live": "+500",
     "create": "+500",
-    "love": "+200",
-    "dream": "+400"
+    "love": "+500",
+    "dream": "+500"
   }
 },
 
@@ -35,8 +35,8 @@ const gifts = [
   "superpowers": {
     "live": "+500",
     "create": "+500",
-    "love": "+400",
-    "dream": "+200"
+    "love": "+500",
+    "dream": "+500"
   }
 },
 
@@ -45,10 +45,10 @@ const gifts = [
   "description": "Merges branches in Git without conflicts, like a wizard during an exam.",
   "category": "For Work",
   "superpowers": {
-    "live": "+200",
+    "live": "+500",
     "create": "+500",
-    "love": "+200",
-    "dream": "+300"
+    "love": "+500",
+    "dream": "+500"
   }
 },
 
@@ -57,10 +57,10 @@ const gifts = [
   "description": "Handles asynchronous code and promises like well-trained pets.",
   "category": "For Work",
   "superpowers": {
-    "live": "+100",
-    "create": "+400",
-    "love": "+200",
-    "dream": "+300"
+    "live": "+500",
+    "create": "+500",
+    "love": "+500",
+    "dream": "+500"
   }
 },
 
@@ -69,10 +69,10 @@ const gifts = [
   "description": "Can make Flexbox and Grid work together like they were always best friends.",
   "category": "For Work",
   "superpowers": {
-    "live": "+200",
+    "live": "+500",
     "create": "+500",
-    "love": "+200",
-    "dream": "+300"
+    "love": "+500",
+    "dream": "+500"
   }
 },
 
@@ -84,7 +84,7 @@ const gifts = [
     "live": "+500",
     "create": "+500",
     "love": "+500",
-    "dream": "+200"
+    "dream": "+500"
   }
 },
 
@@ -94,9 +94,9 @@ const gifts = [
   "category": "For Work",
   "superpowers": {
     "live": "+500",
-    "create": "+300",
-    "love": "+200",
-    "dream": "+200"
+    "create": "+500",
+    "love": "+500",
+    "dream": "+500"
   }
 },
 
@@ -107,8 +107,8 @@ const gifts = [
   "superpowers": {
     "live": "+500",
     "create": "+500",
-    "love": "+200",
-    "dream": "+100"
+    "love": "+500",
+    "dream": "+500"
   }
 },
 
@@ -117,10 +117,10 @@ const gifts = [
   "description": "Accepts client revisions with the Zen calm of Buddha.",
   "category": "For Work",
   "superpowers": {
-    "live": "+300",
+    "live": "+500",
     "create": "+500",
-    "love": "+300",
-    "dream": "+400"
+    "love": "+500",
+    "dream": "+500"
   }
 },
 
@@ -132,7 +132,7 @@ const gifts = [
     "live": "+500",
     "create": "+500",
     "love": "+500",
-    "dream": "+200"
+    "dream": "+500"
   }
 },
 
@@ -143,8 +143,8 @@ const gifts = [
   "superpowers": {
     "live": "+500",
     "create": "+500",
-    "love": "+400",
-    "dream": "+400"
+    "love": "+500",
+    "dream": "+500"
   }
 },
 
@@ -153,10 +153,10 @@ const gifts = [
   "description": "Can sit for hours, but maintains perfect posture like a ballerina.",
   "category": "For Health",
   "superpowers": {
-    "live": "+400",
+    "live": "+500",
     "create": "+500",
     "love": "+500",
-    "dream": "+400"
+    "dream": "+500"
   }
 },
 
@@ -165,10 +165,10 @@ const gifts = [
   "description": "Gets 10,000 steps a day even while sitting at the computer.",
   "category": "For Health",
   "superpowers": {
-    "live": "+400",
-    "create": "+300",
+    "live": "+500",
+    "create": "+500",
     "love": "+500",
-    "dream": "+400"
+    "dream": "+500"
   }
 },
 
@@ -177,10 +177,10 @@ const gifts = [
   "description": "Ignoring desktop snacks like a strict dietician.",
   "category": "For Health",
   "superpowers": {
-    "live": "+400",
-    "create": "+100",
-    "love": "+200",
-    "dream": "+400"
+    "live": "+500",
+    "create": "+500",
+    "love": "+500",
+    "dream": "+500"
   }
 },
 
@@ -190,7 +190,7 @@ const gifts = [
   "category": "For Health",
   "superpowers": {
     "live": "+500",
-    "create": "+300",
+    "create": "+500",
     "love": "+500",
     "dream": "+500"
   }
@@ -201,7 +201,7 @@ const gifts = [
   "description": "Sleeps 6 hours but feels like they had 10.",
   "category": "For Health",
   "superpowers": {
-    "live": "+400",
+    "live": "+500",
     "create": "+500",
     "love": "+500",
     "dream": "+500"
@@ -213,10 +213,10 @@ const gifts = [
   "description": "Takes a stretch break every hour without forgetting, no matter how focused.",
   "category": "For Health",
   "superpowers": {
-    "live": "+300",
-    "create": "+300",
-    "love": "+300",
-    "dream": "+400"
+    "live": "+500",
+    "create": "+500",
+    "love": "+500",
+    "dream": "+500"
   }
 },
 
@@ -225,10 +225,10 @@ const gifts = [
   "description": "Can work all day at the monitor without feeling like their eyes are on fire.",
   "category": "For Health",
   "superpowers": {
-    "live": "+100",
-    "create": "+300",
+    "live": "+500",
+    "create": "+500",
     "love": "+500",
-    "dream": "+400"
+    "dream": "+500"
   }
 },
 
@@ -237,10 +237,10 @@ const gifts = [
   "description": "Masters meditation right at the keyboard.",
   "category": "For Health",
   "superpowers": {
-    "live": "+100",
-    "create": "+400",
-    "love": "+200",
-    "dream": "+400"
+    "live": "+500",
+    "create": "+500",
+    "love": "+500",
+    "dream": "+500"
   }
 },
 
@@ -249,10 +249,10 @@ const gifts = [
   "description": "Easily switches from coding to yoga and back.",
   "category": "For Health",
   "superpowers": {
-    "live": "+400",
-    "create": "+400",
-    "love": "+400",
-    "dream": "+400"
+    "live": "+500",
+    "create": "+500",
+    "love": "+500",
+    "dream": "+500"
   }
 },
 
@@ -261,10 +261,10 @@ const gifts = [
   "description": "Always picks fruit, even when chocolate is within arm’s reach.",
   "category": "For Health",
   "superpowers": {
-    "live": "+400",
-    "create": "+300",
-    "love": "+200",
-    "dream": "+400"
+    "live": "+500",
+    "create": "+500",
+    "love": "+500",
+    "dream": "+500"
   }
 },
 
@@ -276,7 +276,7 @@ const gifts = [
     "live": "+500",
     "create": "+500",
     "love": "+500",
-    "dream": "+400"
+    "dream": "+500"
   }
 },
 
@@ -285,10 +285,10 @@ const gifts = [
   "description": "Drinks coffee at night and still falls asleep with no problem.",
   "category": "For Health",
   "superpowers": {
-    "live": "+400",
-    "create": "+300",
+    "live": "+500",
+    "create": "+500",
     "love": "+500",
-    "dream": "+200"
+    "dream": "+500"
   }
 },
 
@@ -297,8 +297,8 @@ const gifts = [
   "description": "Finds joy in the little things—even in a build that finishes unexpectedly fast.",
   "category": "For Harmony",
   "superpowers": {
-    "live": "+200",
-    "create": "+200",
+    "live": "+500",
+    "create": "+500",
     "love": "+500",
     "dream": "+500"
   }
@@ -309,8 +309,8 @@ const gifts = [
   "description": "Laughs at code errors like they’re jokes instead of getting angry.",
   "category": "For Harmony",
   "superpowers": {
-    "live": "+300",
-    "create": "+200",
+    "live": "+500",
+    "create": "+500",
     "love": "+500",
     "dream": "+500"
   }
@@ -321,10 +321,10 @@ const gifts = [
   "description": "Accepts bugs as part of the journey to perfection — it’s just another task.",
   "category": "For Harmony",
   "superpowers": {
-    "live": "+300",
-    "create": "+200",
+    "live": "+500",
+    "create": "+500",
     "love": "+500",
-    "dream": "+400"
+    "dream": "+500"
   }
 },
 
@@ -333,10 +333,10 @@ const gifts = [
   "description": "Philosophically accepts any client suggestion after a long refactor.",
   "category": "For Harmony",
   "superpowers": {
-    "live": "+300",
-    "create": "+200",
+    "live": "+500",
+    "create": "+500",
     "love": "+500",
-    "dream": "+400"
+    "dream": "+500"
   }
 },
 
@@ -345,9 +345,9 @@ const gifts = [
   "description": "Remains zen even when the deadline is close and the project manager is stressed.",
   "category": "For Harmony",
   "superpowers": {
-    "live": "+200",
-    "create": "+200",
-    "love": "+300",
+    "live": "+500",
+    "create": "+500",
+    "love": "+500",
     "dream": "+500"
   }
 },
@@ -357,10 +357,10 @@ const gifts = [
   "description": "Finds inspiration on an empty screen as if masterpieces are already there.",
   "category": "For Harmony",
   "superpowers": {
-    "live": "+300",
-    "create": "+200",
-    "love": "+400",
-    "dream": "+100"
+    "live": "+500",
+    "create": "+500",
+    "love": "+500",
+    "dream": "+500"
   }
 },
 
@@ -369,8 +369,8 @@ const gifts = [
   "description": "Maintains inner calm even in moments of intense crisis.",
   "category": "For Harmony",
   "superpowers": {
-    "live": "+200",
-    "create": "+200",
+    "live": "+500",
+    "create": "+500",
     "love": "+500",
     "dream": "+500"
   }
@@ -382,7 +382,7 @@ const gifts = [
   "category": "For Harmony",
   "superpowers": {
     "live": "+500",
-    "create": "+200",
+    "create": "+500",
     "love": "+500",
     "dream": "+500"
   }
@@ -393,9 +393,9 @@ const gifts = [
   "description": "Can lighten any tense situation with a joke that even bugs laugh at.",
   "category": "For Harmony",
   "superpowers": {
-    "live": "+300",
-    "create": "+200",
-    "love": "+200",
+    "live": "+500",
+    "create": "+500",
+    "love": "+500",
     "dream": "+500"
   }
 },
@@ -405,10 +405,10 @@ const gifts = [
   "description": "Knows when to just step back from the keyboard and breathe.",
   "category": "For Harmony",
   "superpowers": {
-    "live": "+300",
-    "create": "+200",
-    "love": "+100",
-    "dream": "+100"
+    "live": "+500",
+    "create": "+500",
+    "love": "+500",
+    "dream": "+500"
   }
 },
 
@@ -417,8 +417,8 @@ const gifts = [
   "description": "Can support a colleague in their darkest hour, even if it’s a 500 error.",
   "category": "For Harmony",
   "superpowers": {
-    "live": "+300",
-    "create": "+200",
+    "live": "+500",
+    "create": "+500",
     "love": "+500",
     "dream": "+500"
   }
@@ -429,10 +429,10 @@ const gifts = [
   "description": "Creates work playlists so good, even deadlines follow the rhythm.",
   "category": "For Harmony",
   "superpowers": {
-    "live": "+300",
-    "create": "+200",
-    "love": "+300",
-    "dream": "+200"
+    "live": "+500",
+    "create": "+500",
+    "love": "+500",
+    "dream": "+500"
   }
 }
 ];  
@@ -647,16 +647,15 @@ const appendCards = (i) => {
   const dataArray = [];
 
   if (window.location.pathname.endsWith('gifts.html')) {
-    // Если на странице gifts.html, добавляем все карточки
+
     for (let i = 0; i < gifts.length; i++) {
       const card = generateCards(i);
       dataArray.push(card);
     }
   } else {
-    // В противном случае добавляем 36 случайных карточек
+
     const selectedIndexes = new Set();
 
-    // Убедитесь, что хоть 36 уникальных индексов существуют
     while (selectedIndexes.size < 4 && selectedIndexes.size < gifts.length) {
       const randomIndex = Math.floor(Math.random() * gifts.length);
       selectedIndexes.add(randomIndex);
